@@ -1132,7 +1132,7 @@ extension DropDown {
 	public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
 		let view = super.hitTest(point, with: event)
 
-        if #available(macCatalyst 13.4, *) {
+        if #available(iOS 13.4, *) {
             guard let event = event, event.type != .hover else {
                 return view
             }
